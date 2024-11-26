@@ -13,14 +13,16 @@
     let fem = [];
     let masc = [];
 
-    for(let item of listaDeNomes){
-        alert()
-        const gen = prompt(`Qual genêro do nome irá aparecer? Feminino (F) e Masculino (M)!`)
-        if(gen == "F"){
-
+    for (let item of listaDeNomes) {
+        const gen = prompt(`Qual gênero do nome ${item}? Feminino (F) ou Masculino (M)?`);
+        if (gen.toUpperCase() === "F") {
+            fem.push(item);
+        } else if (gen.toUpperCase() === "M") {
+            masc.push(item);
         }
     }
 
     //SAÍDA
-
+    document.write("<b>Feminino:</b> " + fem.join(", ") + "<br>");
+    document.write("<b>Masculino:</b> " + masc.join(", "));
 </script>
